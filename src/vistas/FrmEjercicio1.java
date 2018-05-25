@@ -44,6 +44,12 @@ public class FrmEjercicio1 extends javax.swing.JInternalFrame {
 
         jLabel2.setText("Valor 2:");
 
+        txtVaal1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtVaal1KeyTyped(evt);
+            }
+        });
+
         btnSumar.setText("Sumar");
         btnSumar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,6 +119,13 @@ public class FrmEjercicio1 extends javax.swing.JInternalFrame {
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
         this.dispose();
     }//GEN-LAST:event_btnMenuActionPerformed
+
+    private void txtVaal1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtVaal1KeyTyped
+        Character c = evt.getKeyChar();
+        if(!Character.isDigit(c)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtVaal1KeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
